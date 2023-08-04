@@ -15,9 +15,9 @@ public class helper {
         helper.driver = driver;
     }
 
-    public static int pageloadouttime = 30;
-    public static int implicittime = 30;
-    public static int explicittime = 30;
+    public static int pageloadouttime = 15;
+    public static int implicittime = 10;
+    public static int explicittime = 20;
 
     public static byte[] captureScreenshotinByte(WebDriver driver) {
         TakesScreenshot ts = (TakesScreenshot) driver;
