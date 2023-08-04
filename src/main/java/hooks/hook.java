@@ -22,10 +22,10 @@ public class hook {
 
     @After
     public void tearDown(Scenario scenario) {
-        String scenarioName = scenario.getName().replaceAll(" ","_");
-        if(scenario.isFailed()) {
+        String scenarioName = scenario.getName().replaceAll(" ", "_");
+        if (scenario.isFailed()) {
             byte[] screenshot = helper.captureScreenshotinByte(driver);
-            scenario.attach(screenshot,"image/png",scenarioName);
+            scenario.attach(screenshot, "image/png", scenarioName);
         }
         driver.quit();
     }

@@ -2,10 +2,14 @@ package utility;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 
 public class helper {
@@ -17,7 +21,7 @@ public class helper {
 
     public static int pageloadouttime = 15;
     public static int implicittime = 10;
-    public static int explicittime = 20;
+    public static int explicittime = 15;
 
     public static byte[] captureScreenshotinByte(WebDriver driver) {
         TakesScreenshot ts = (TakesScreenshot) driver;
@@ -59,19 +63,22 @@ public class helper {
         return new SimpleDateFormat("HH_mm_ss_dd_MM_yyyy").format(new Date());
     }
 
-    public static boolean elementToBeDisplayed(By locator){
+    public static boolean elementToBeDisplayed(By locator) {
         return driver.findElement(locator).isDisplayed();
     }
 
-    public static void elementClick(By locator){
+    public static void elementClick(By locator) {
         driver.findElement(locator).click();
     }
 
-    public static void sendText(By locator,String string){
+    public static void sendText(By locator, String string) {
         WebElement element = driver.findElement(locator);
         element.click();
         element.clear();
         element.sendKeys(string);
     }
-
+     public static void waitForElement(By locator){
+         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(explicittime));
+         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+     }
 }

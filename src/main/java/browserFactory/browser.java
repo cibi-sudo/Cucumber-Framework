@@ -34,6 +34,7 @@ public class browser {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(helper.implicittime));
         return driver;
     }
+
     public static WebDriver getDriver() {
         return driver;
     }

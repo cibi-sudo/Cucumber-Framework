@@ -8,12 +8,12 @@ public class configReader {
     public Properties intializeProperties() {
 
         Properties prop = new Properties();
-        File proFile = new File(System.getProperty("user.dir")+"/src/test/resources/config/config.properties");
+        File proFile = new File(System.getProperty("user.dir") + "/src/test/resources/config/config.properties");
 
         try {
             FileInputStream file = new FileInputStream(proFile);
             prop.load(file);
-        }catch(Throwable e) {
+        } catch (Throwable e) {
             e.printStackTrace();
         }
         return prop;
