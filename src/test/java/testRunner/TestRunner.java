@@ -8,6 +8,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "src/test/resources/Features/login.feature",
         glue = {"stepDefinitions", "hooks"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
-public class mytestrunner {
+public class TestRunner {
 
 }
