@@ -1,2 +1,11 @@
 # Cucumber_Hybrid_Framework
-The Cucumber_Hybrid_Framework GitHub repository is a template for creating a hybrid Selenium Cucumber BDD framework with Maven, POM, step definitions, extent reporter.
+This is a cucumber hybrid framework that uses JUnit, page object model, and extent report for test automation.
+
+# Features
+Uses Cucumber BDD syntax for writing test cases.
+
+Uses JUnit for test execution and reporting.
+
+Uses page object model for reusable and maintainable code.
+
+Uses extent report for detailed and interactive test reports.
