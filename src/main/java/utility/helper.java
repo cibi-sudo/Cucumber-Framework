@@ -42,7 +42,7 @@ public class helper {
         try {
             TakesScreenshot ts = (TakesScreenshot) driver;
             File src = ts.getScreenshotAs(OutputType.FILE);
-            File trg = new File("./Images/" + getcurrenttime() + ".png");
+            File trg = new File("/home/cibi/IdeaProjects/Cucumber_Hybrid_Framework/src/main/resources/screenshots" + getcurrenttime() + ".png");
             FileUtils.copyFile(src, trg);
         } catch (IOException exception) {
             System.out.println("Something went wrong" + exception.getMessage());
@@ -53,7 +53,7 @@ public class helper {
         try {
             TakesScreenshot ts = (TakesScreenshot) driver;
             File src = element.getScreenshotAs(OutputType.FILE);
-            File trg = new File("./Images/" + getcurrenttime() + ".png");
+            File trg = new File("/home/cibi/IdeaProjects/Cucumber_Hybrid_Framework/src/main/resources/screenshots" + getcurrenttime() + ".png");
             FileUtils.copyFile(src, trg);
         } catch (IOException exception) {
             System.out.println("Something went wrong" + exception.getMessage());
