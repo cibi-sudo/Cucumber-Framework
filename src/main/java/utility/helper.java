@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.List;
 
 public class helper {
     static WebDriver driver;
@@ -107,6 +108,11 @@ public class helper {
     public static void doubleClickAction(){
         Actions act = new Actions(driver);
         act.doubleClick().build().perform();
+    }
+
+    public static int elementCount(By locator){
+        List<WebElement> elements = driver.findElements(locator);
+        return elements.size();
     }
 
 }
