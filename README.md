@@ -9,3 +9,5 @@ Uses JUnit for test execution and reporting.
 Uses page object model for reusable and maintainable code.
 
 Uses extent report for detailed and interactive test reports.
+
+Uses Maven surefire plugin to run features in parallel.
