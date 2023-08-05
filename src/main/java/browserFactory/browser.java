@@ -14,19 +14,14 @@ public class browser {
 
     public static WebDriver initializeBrowser(String browserName) {
 
-        switch (browserName) {
-            case "chrome":
-                driver = new ChromeDriver();
-                break;
-            case "firefox":
-                driver = new FirefoxDriver();
-                break;
-            case "edge":
-                driver = new EdgeDriver();
-                break;
-            case "safari":
-                driver = new SafariDriver();
-                break;
+        if (browserName.equals("chrome")) {
+            driver = new ChromeDriver();
+        } else if (browserName.equals("firefox")) {
+            driver = new FirefoxDriver();
+        } else if (browserName.equals("edge")) {
+            driver = new EdgeDriver();
+        } else if (browserName.equals("safari")) {
+            driver = new SafariDriver();
         }
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
