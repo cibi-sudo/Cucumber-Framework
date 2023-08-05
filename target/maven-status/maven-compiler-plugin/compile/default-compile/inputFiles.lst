@@ -1,4 +1,5 @@
 /home/cibi/IdeaProjects/Cucumber_Hybrid_Framework/src/main/java/browserFactory/browser.java
 /home/cibi/IdeaProjects/Cucumber_Hybrid_Framework/src/main/java/hooks/hook.java
+/home/cibi/IdeaProjects/Cucumber_Hybrid_Framework/src/main/java/utility/configReader.java
 /home/cibi/IdeaProjects/Cucumber_Hybrid_Framework/src/main/java/pages/loginPage.java
 /home/cibi/IdeaProjects/Cucumber_Hybrid_Framework/src/main/java/utility/helper.java
