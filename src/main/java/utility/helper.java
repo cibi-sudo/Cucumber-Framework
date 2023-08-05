@@ -2,9 +2,10 @@ package utility;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -77,8 +78,35 @@ public class helper {
         element.clear();
         element.sendKeys(string);
     }
-     public static void waitForElement(By locator){
-         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(explicittime));
-         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-     }
+
+    public static void waitForElement(By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(explicittime));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public static void acceptAlert() {
+        Alert alt = driver.switchTo().alert();
+        alt.accept();
+    }
+
+    public static void dismissAlert() {
+        Alert alt = driver.switchTo().alert();
+        alt.dismiss();
+    }
+
+    public static String getTextAlert() {
+        Alert alt = driver.switchTo().alert();
+        return alt.getText();
+    }
+
+    public static void clickAction(){
+        Actions act = new Actions(driver);
+        act.click().build().perform();
+    }
+
+    public static void doubleClickAction(){
+        Actions act = new Actions(driver);
+        act.doubleClick().build().perform();
+    }
+
 }
