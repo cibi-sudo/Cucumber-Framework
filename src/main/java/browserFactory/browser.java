@@ -15,7 +15,7 @@ import java.time.Duration;
 import java.util.Properties;
 
 public class browser {
-    static WebDriver driver = null;
+    static WebDriver driver;
     static Properties prop = new configReader().intializeProperties();
 
     public static WebDriver initializeBrowser(String browserName) {
