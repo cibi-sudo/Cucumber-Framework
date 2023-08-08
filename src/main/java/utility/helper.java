@@ -20,7 +20,6 @@ public class helper {
     public static void setDriver(WebDriver driver) {
         helper.driver = driver;
     }
-
     public static int pageloadouttime = 20;
     public static int implicittime = 10;
     public static int explicittime = 5;
@@ -99,7 +98,6 @@ public class helper {
         Alert alt = driver.switchTo().alert();
         return alt.getText();
     }
-
     public static void clickAction(){
         Actions act = new Actions(driver);
         act.click().build().perform();
