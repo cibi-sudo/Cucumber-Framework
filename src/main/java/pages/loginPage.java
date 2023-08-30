@@ -1,17 +1,24 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import utility.helper;
 
 public class loginPage {
     WebDriver driver;
-    By brandElement = By.xpath("//div[@class='orangehrm-login-logo']");
-    By usernameField = By.xpath("//input[@name='username']");
-    By passwordField = By.xpath("//input[@name='password']");
-    By loginButton = By.xpath("//button[@type='submit']");
-    By warningMessage = By.xpath("//p[text()='Invalid credentials']");
-    By requiredMessage = By.xpath("//span[text()='Required']");
+    @FindBy(xpath = "//div[@class='orangehrm-login-logo']")
+    private WebElement brandElement;
+    @FindBy(xpath = "//input[@name='username']")
+    private WebElement usernameField;
+    @FindBy(xpath = "//input[@name='password']")
+    private WebElement passwordField;
+    @FindBy(xpath = "//button[@type='submit']")
+    private WebElement loginButton;
+    @FindBy(xpath = "//p[text()='Invalid credentials']")
+    private WebElement warningMessage;
+    @FindBy(xpath = "//span[text()='Required']")
+    private WebElement requiredMessage;
 
     public loginPage(WebDriver driver) {
         this.driver = driver;
