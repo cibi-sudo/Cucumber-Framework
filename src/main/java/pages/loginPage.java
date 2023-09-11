@@ -8,17 +8,17 @@ import utility.helper;
 public class loginPage {
     WebDriver driver;
     @FindBy(xpath = "//div[@class='orangehrm-login-logo']")
-    private WebElement brandElement;
+    public static WebElement brandElement;
     @FindBy(xpath = "//input[@name='username']")
-    private WebElement usernameField;
+    public static WebElement usernameField;
     @FindBy(xpath = "//input[@name='password']")
-    private WebElement passwordField;
+    public static WebElement passwordField;
     @FindBy(xpath = "//button[@type='submit']")
-    private WebElement loginButton;
+    public static WebElement loginButton;
     @FindBy(xpath = "//p[text()='Invalid credentials']")
-    private WebElement warningMessage;
+    public static WebElement warningMessage;
     @FindBy(xpath = "//span[text()='Required']")
-    private WebElement requiredMessage;
+    public static WebElement requiredMessage;
 
     public loginPage(WebDriver driver) {
         this.driver = driver;
