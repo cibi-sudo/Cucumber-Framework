@@ -1,18 +1,17 @@
-package stepDefinitions;
+package stepdefinitions;
 
 
-import browserFactory.browser;
-import com.google.common.base.Verify;
+import browserfactory.Browser;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
-import pages.loginPage;
+import pages.LoginPage;
 
 
-public class login {
-    loginPage login = PageFactory.initElements(browser.getDriver(), loginPage.class);
+public class Login {
+    LoginPage login = PageFactory.initElements(Browser.getDriver(), LoginPage.class);
 
     @Given("User able to see the the brand element")
     public void user_able_to_see_the_the_brand_element() {

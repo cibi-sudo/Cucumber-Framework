@@ -13,14 +13,14 @@ import java.time.Duration;
 import java.util.Date;
 import java.util.List;
 
-public class helper {
+public class Helper {
     public static int pageloadouttime = 20;
     public static int implicittime = 10;
     public static int explicittime = 5;
     static WebDriver driver;
 
     public static void setDriver(WebDriver driver) {
-        helper.driver = driver;
+        Helper.driver = driver;
     }
 
     public static byte[] captureScreenshotinByte(WebDriver driver) {

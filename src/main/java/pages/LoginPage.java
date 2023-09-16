@@ -3,9 +3,9 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utility.helper;
+import utility.Helper;
 
-public class loginPage {
+public class LoginPage {
     WebDriver driver;
     @FindBy(xpath = "//div[@class='orangehrm-login-logo']")
     public static WebElement brandElement;
@@ -20,34 +20,34 @@ public class loginPage {
     @FindBy(xpath = "//span[text()='Required']")
     public static WebElement requiredMessage;
 
-    public loginPage(WebDriver driver) {
+    public LoginPage(WebDriver driver) {
         this.driver = driver;
-        helper.setDriver(driver);
+        Helper.setDriver(driver);
     }
 
     public boolean visibilityBrandElement() {
-        return helper.elementToBeDisplayed(brandElement);
+        return Helper.elementToBeDisplayed(brandElement);
     }
 
     public void enterUsername(String username) {
-        helper.sendText(usernameField, username);
+        Helper.sendText(usernameField, username);
     }
 
     public void enterPassword(String password) {
-        helper.sendText(passwordField, password);
+        Helper.sendText(passwordField, password);
     }
 
     public void loginClick() {
-        helper.elementClick(loginButton);
+        Helper.elementClick(loginButton);
     }
 
     public boolean getWarningMessage() {
-        helper.waitForElement(warningMessage);
-        return helper.elementToBeDisplayed(warningMessage);
+        Helper.waitForElement(warningMessage);
+        return Helper.elementToBeDisplayed(warningMessage);
     }
 
     public boolean getRequiredMessage() {
-        helper.waitForElement(requiredMessage);
-        return helper.elementToBeDisplayed(requiredMessage);
+        Helper.waitForElement(requiredMessage);
+        return Helper.elementToBeDisplayed(requiredMessage);
     }
 }

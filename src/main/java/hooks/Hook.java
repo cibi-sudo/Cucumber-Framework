@@ -1,22 +1,22 @@
 package hooks;
 
-import browserFactory.browser;
+import browserfactory.Browser;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.WebDriver;
-import utility.configReader;
-import utility.helper;
+import utility.ConfigReader;
+import utility.Helper;
 
 import java.util.Properties;
 
-public class hook {
+public class Hook {
     WebDriver driver;
 
     @Before
     public void setup() {
-        Properties prop = new configReader().intializeProperties();
-        driver = browser.initializeBrowser(prop.getProperty("browser"));
+        Properties prop = new ConfigReader().intializeProperties();
+        driver = Browser.initializeBrowser(prop.getProperty("browser"));
         driver.get(prop.getProperty("url"));
     }
 
@@ -24,7 +24,7 @@ public class hook {
     public void tearDown(Scenario scenario) {
         String scenarioName = scenario.getName().replaceAll(" ", "_");
         if (scenario.isFailed()) {
-            byte[] screenshot = helper.captureScreenshotinByte(driver);
+            byte[] screenshot = Helper.captureScreenshotinByte(driver);
             scenario.attach(screenshot, "image/png", scenarioName);
         }
         driver.quit();
