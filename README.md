@@ -1,4 +1,4 @@
-# Cucumber_Hybrid_Framework
+# Cucumber_Framework
 This is a cucumber hybrid framework that uses JUnit, page object model, and extent report for test automation.
 
 # Features
